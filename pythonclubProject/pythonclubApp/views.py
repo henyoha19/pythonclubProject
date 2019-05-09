@@ -14,4 +14,4 @@ def getMeetings(request):
 
 def meetingdetails(request, id):
     meet=get_object_or_404(Meeting, pk=id)
-    return render(request, 'pythonclubApp/meetingdetail.html')  
+    return render(request, 'pythonclubApp/meetingdetail.html',{'meet': meet})  
